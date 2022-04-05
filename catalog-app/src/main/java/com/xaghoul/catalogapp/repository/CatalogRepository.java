@@ -1,7 +1,13 @@
 package com.xaghoul.catalogapp.repository;
 
+import com.xaghoul.catalogapp.entity.ProductEntity;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
 
-public interface CatalogRepository extends CrudRepository<String, String> {
+@Repository
+public interface CatalogRepository extends CrudRepository<ProductEntity, String> {
+
+    List<ProductEntity> findAllBySku(String sku);
 }
