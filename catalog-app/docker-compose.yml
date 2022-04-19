@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database:
+    image: "postgres:14"
+    container_name: product_container
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: product_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+    restart: always

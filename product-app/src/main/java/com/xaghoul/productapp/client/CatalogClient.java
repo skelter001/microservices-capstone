@@ -1,7 +1,7 @@
 package com.xaghoul.productapp.client;
 
-import dto.ProductDTO;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import com.xaghoul.common.dto.ProductDTO;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 

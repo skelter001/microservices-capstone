@@ -1,7 +1,7 @@
 package com.xaghoul.catalogapp.controller;
 
 import com.xaghoul.catalogapp.service.CatalogService;
-import dto.ProductDTO;
+import com.xaghoul.common.dto.ProductDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

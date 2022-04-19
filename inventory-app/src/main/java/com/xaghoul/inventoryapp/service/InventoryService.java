@@ -2,7 +2,7 @@ package com.xaghoul.inventoryapp.service;
 
 import com.xaghoul.inventoryapp.client.CatalogClient;
 import com.xaghoul.inventoryapp.model.ProductStatus;
-import dto.ProductDTO;
+import com.xaghoul.common.dto.ProductDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,11 +13,9 @@ import java.util.stream.Collectors;
 @Service
 public class InventoryService {
 
-    private CatalogClient catalogClient;
     private final Map<String, ProductStatus> productStatusMap;
 
     public InventoryService(CatalogClient catalogClient) {
-        this.catalogClient = catalogClient;
         productStatusMap = generateProductStatuses(catalogClient.getAllProducts());
     }
 

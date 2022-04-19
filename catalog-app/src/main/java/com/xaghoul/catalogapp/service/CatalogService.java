@@ -3,7 +3,7 @@ package com.xaghoul.catalogapp.service;
 import com.xaghoul.catalogapp.exception.EntityNotFoundException;
 import com.xaghoul.catalogapp.mapper.ProductMapper;
 import com.xaghoul.catalogapp.repository.CatalogRepository;
-import dto.ProductDTO;
+import com.xaghoul.common.dto.ProductDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -2,7 +2,7 @@ package com.xaghoul.catalogapp.mapper;
 
 
 import com.xaghoul.catalogapp.entity.ProductEntity;
-import dto.ProductDTO;
+import com.xaghoul.common.dto.ProductDTO;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

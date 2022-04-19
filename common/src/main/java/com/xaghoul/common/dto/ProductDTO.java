@@ -1,4 +1,4 @@
-package dto;
+package com.xaghoul.common.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,6 +20,7 @@ public class ProductDTO {
     private Double listPrice;
     private Double salePrice;
     private String category;
-    private List<String> categoryTree;
-    private String avgProductPrice;
+    private String categoryTree;
+    private String averageProductPrice;
+    private String productUrl;
 }
