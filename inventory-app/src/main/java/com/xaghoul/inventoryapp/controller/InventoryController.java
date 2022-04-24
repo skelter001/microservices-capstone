@@ -12,14 +12,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/inventory")
 @AllArgsConstructor
-@Slf4j
 public class InventoryController {
 
     private final InventoryService inventoryService;
 
     @GetMapping
     private List<String> getAllAvailableProductIds() {
-        log.info("Get all available products");
         return inventoryService.getAllAvailableProductIds();
     }
 }
