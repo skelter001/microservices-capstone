@@ -5,22 +5,24 @@ import com.xaghoul.productapp.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/api/v1/product")
+@RestController
+@RequestMapping("/api/v1/product")
 @AllArgsConstructor
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
-    @GetMapping("/{uniqId}")
+    @GetMapping("/id/{uniqId}")
     public ProductDTO getProductById(@PathVariable String uniqId) {
         return productService.getProductById(uniqId);
     }
 
-    @GetMapping("/{sku}")
+    @GetMapping("/sku/{sku}")
     public List<ProductDTO> getProductsBySku(@PathVariable String sku) {
         return productService.getProductsBySku(sku);
     }

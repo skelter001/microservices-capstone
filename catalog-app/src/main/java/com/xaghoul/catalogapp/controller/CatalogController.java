@@ -22,12 +22,12 @@ public class CatalogController {
         return catalogService.getAllProducts();
     }
 
-    @GetMapping("/{uniqId}")
+    @GetMapping("/id/{uniqId}")
     public ProductDTO getProductById(@PathVariable String uniqId) {
         return catalogService.getProductById(uniqId);
     }
 
-    @GetMapping("/{sku}")
+    @GetMapping("/sku/{sku}")
     public List<ProductDTO> getProductsBySku(@PathVariable String sku) {
         return catalogService.getAllBySku(sku);
     }
