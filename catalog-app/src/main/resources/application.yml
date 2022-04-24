@@ -1,6 +1,10 @@
 spring:
   application:
     name: catalog-service
+  cloud:
+    service-registry:
+      auto-registration:
+        enabled: true
 
 server:
   port: 0
