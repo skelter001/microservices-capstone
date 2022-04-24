@@ -1,4 +1,4 @@
-package com.xaghoul.catalogapp.exception;
+package com.xaghoul.common.exception;
 
 
 import org.springframework.http.HttpStatus;

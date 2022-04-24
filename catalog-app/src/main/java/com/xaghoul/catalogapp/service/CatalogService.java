@@ -1,9 +1,9 @@
 package com.xaghoul.catalogapp.service;
 
-import com.xaghoul.catalogapp.exception.EntityNotFoundException;
 import com.xaghoul.catalogapp.mapper.ProductMapper;
 import com.xaghoul.catalogapp.repository.CatalogRepository;
 import com.xaghoul.common.dto.ProductDTO;
+import com.xaghoul.common.exception.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
