@@ -1,17 +1,19 @@
-package com.xaghoul.inventoryapp;
+package com.xaghoul.productapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class InventoryAppApplication {
+@EnableDiscoveryClient
+public class ProductServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(InventoryAppApplication.class, args);
+        SpringApplication.run(ProductServiceApplication.class, args);
     }
 
 }
