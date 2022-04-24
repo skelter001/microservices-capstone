@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,6 +19,7 @@ public class ProductDTO {
     private Double salePrice;
     private String category;
     private String categoryTree;
-    private String averageProductPrice;
+    private String averageProductRating;
     private String productUrl;
+    private String brand;
 }
