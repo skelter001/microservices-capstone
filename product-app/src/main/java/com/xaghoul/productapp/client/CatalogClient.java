@@ -10,9 +10,9 @@ import java.util.List;
 @FeignClient(value = "catalog-service", path = "/api/v1/catalog")
 public interface CatalogClient {
 
-    @GetMapping("/{uniqId}")
+    @GetMapping("/id/{uniqId}")
     ProductDTO getProductById(@PathVariable String uniqId);
 
-    @GetMapping("/{sku}")
+    @GetMapping("/sku/{sku}")
     List<ProductDTO> getProductsBySku(@PathVariable String sku);
 }

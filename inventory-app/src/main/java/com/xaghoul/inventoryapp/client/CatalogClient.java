@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(url = "localhost:40311", name = "catalog-service", path = "/api/v1/catalog")
+@FeignClient(value = "catalog-service", path = "/api/v1/catalog")
 public interface CatalogClient {
 
     @GetMapping
