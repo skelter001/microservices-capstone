@@ -1,9 +1,9 @@
 package com.xaghoul.productapp.service;
 
+import com.xaghoul.common.dto.ProductDTO;
 import com.xaghoul.common.exception.ProductIsUnavailableException;
 import com.xaghoul.productapp.client.CatalogClient;
 import com.xaghoul.productapp.client.InventoryClient;
-import com.xaghoul.common.dto.ProductDTO;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class ProductService {
 
-    private CatalogClient catalogClient;
-    private InventoryClient inventoryClient;
+    private final CatalogClient catalogClient;
+    private final InventoryClient inventoryClient;
 
     public ProductDTO getProductById(String productId) {
         List<String> availableProductIds = inventoryClient.getAllAvailableProductIds();

@@ -1,6 +1,5 @@
 package com.xaghoul.common.exception;
 
-import com.xaghoul.common.dto.ProductDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

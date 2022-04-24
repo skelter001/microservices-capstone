@@ -3,7 +3,10 @@ package com.xaghoul.catalogapp.controller;
 import com.xaghoul.catalogapp.service.CatalogService;
 import com.xaghoul.common.dto.ProductDTO;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -12,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CatalogController {
 
-    private CatalogService catalogService;
+    private final CatalogService catalogService;
 
     @GetMapping
     public List<ProductDTO> getAllProducts() {

@@ -1,8 +1,8 @@
 package com.xaghoul.inventoryapp.service;
 
+import com.xaghoul.common.dto.ProductDTO;
 import com.xaghoul.inventoryapp.client.CatalogClient;
 import com.xaghoul.inventoryapp.model.ProductStatus;
-import com.xaghoul.common.dto.ProductDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

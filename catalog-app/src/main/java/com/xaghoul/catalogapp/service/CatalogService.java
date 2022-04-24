@@ -15,8 +15,8 @@ import java.util.stream.StreamSupport;
 @AllArgsConstructor
 public class CatalogService {
 
-    private CatalogRepository catalogRepository;
-    private ProductMapper productMapper;
+    private final CatalogRepository catalogRepository;
+    private final ProductMapper productMapper;
 
     public List<ProductDTO> getAllProducts() {
         return StreamSupport.stream(catalogRepository.findAll().spliterator(), false)
