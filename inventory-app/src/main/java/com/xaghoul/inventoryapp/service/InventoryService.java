@@ -28,7 +28,6 @@ public class InventoryService {
         log.info("Inventory Service: get all available products");
         productStatusMap.putAll(generateProductStatuses(catalogClient.getAllProducts()));
 
-
         return productStatusMap.entrySet().stream()
                 .filter(status -> status.getValue().equals(ProductStatus.AVAILABLE))
                 .map(Map.Entry::getKey)
