@@ -36,6 +36,8 @@ public class CatalogService {
 
     public List<ProductDTO> getAllBySku(String sku) {
         log.info("Catalog Service: get all products by sku {}", sku);
+        if (!catalogRepository.existsBySku(sku))
+            throw new EntityNotFoundException();
         return catalogRepository.findAllBySku(sku).stream()
                 .map(productMapper::toModel)
                 .collect(Collectors.toList());

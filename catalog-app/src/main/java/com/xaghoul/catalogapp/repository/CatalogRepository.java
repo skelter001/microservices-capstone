@@ -10,4 +10,6 @@ import java.util.List;
 public interface CatalogRepository extends CrudRepository<ProductEntity, String> {
 
     List<ProductEntity> findAllBySku(String sku);
+
+    boolean existsBySku(String sku);
 }
