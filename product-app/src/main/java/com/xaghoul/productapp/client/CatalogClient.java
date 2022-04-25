@@ -12,18 +12,8 @@ import java.util.List;
 public interface CatalogClient {
 
     @GetMapping("/id/{uniqId}")
-    @CircuitBreaker(name = "catalogService", fallbackMethod = "getProductByIdFallback")
     ProductDTO getProductById(@PathVariable String uniqId);
 
     @GetMapping("/sku/{sku}")
-    @CircuitBreaker(name = "catalogService", fallbackMethod = "getProductsBySkuFallback")
     List<ProductDTO> getProductsBySku(@PathVariable String sku);
-
-    default ProductDTO getProductByIdFallback(Exception ex) {
-        return ProductDTO.builder().build();
-    }
-
-    default List<ProductDTO> getProductsBySkuFallback(Exception ex) {
-        return List.of();
-    }
 }

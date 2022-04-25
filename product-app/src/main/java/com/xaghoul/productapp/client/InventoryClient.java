@@ -10,10 +10,5 @@ import java.util.List;
 public interface InventoryClient {
 
     @GetMapping
-    @CircuitBreaker(name = "inventoryService", fallbackMethod = "getAllAvailableProductIdsFallback")
     List<String> getAllAvailableProductIds();
-
-    default List<String> getAllAvailableProductIdsFallback(Exception ex) {
-        return List.of();
-    }
 }
