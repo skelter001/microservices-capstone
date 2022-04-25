@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: product-service
   cloud:
     service-registry:
       auto-registration:
