@@ -9,6 +9,21 @@ spring:
 server:
   port: 8083
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      inventoryService:
+        register-health-indicator: true
+        event-consumer-buffer-size: 10
+        automatic-transition-from-open-to-half-open-enabled: true
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 5
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-size: 10
+        wait-duration-in-open-state: 5s
+
+        sliding-window-type: COUNT_BASED
+
 eureka:
   client:
     service-url.defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
