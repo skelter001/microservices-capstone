@@ -3,6 +3,7 @@ package com.xaghoul.inventoryapp.service;
 import com.xaghoul.common.dto.ProductDTO;
 import com.xaghoul.inventoryapp.client.CatalogClient;
 import com.xaghoul.inventoryapp.model.ProductStatus;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -13,20 +14,16 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
+@AllArgsConstructor
 @Slf4j
 public class InventoryService {
 
     private final CatalogClient catalogClient;
-    private final Map<String, ProductStatus> productStatusMap;
-
-    public InventoryService(CatalogClient catalogClient) {
-        this.catalogClient = catalogClient;
-        productStatusMap = new HashMap<>();
-    }
+    private Map<String, ProductStatus> productStatusMap;
 
     public List<String> getAllAvailableProductIds() {
         log.info("Inventory Service: get all available products");
-        productStatusMap.putAll(generateProductStatuses(catalogClient.getAllProducts()));
+        productStatusMap = generateProductStatuses(catalogClient.getAllProducts());
 
         return productStatusMap.entrySet().stream()
                 .filter(status -> status.getValue().equals(ProductStatus.AVAILABLE))
