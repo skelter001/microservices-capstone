@@ -3,6 +3,11 @@ spring:
     service-registry:
       auto-registration:
         enabled: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/product_database
+    username: ${DB_USERNAME:admin}
+    password: ${DB_PASSWORD:password}
 
 server:
   port: 0
