@@ -55,3 +55,8 @@ docker-compose up
 - To up zipkin server: 
 
 ``docker run -d -p 9411:9411 openzipkin/zipkin``
+
+Todo:
+- [ ] Set CI
+- [ ] Pull the data to container with its creation
+- [ ] 
