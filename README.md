@@ -27,6 +27,15 @@
 - Eureka service:
   - Registering applications and discovering them for inter-component REST calls.
 ##   
+
+Tech. stack: 
+- Java 17
+- Spring 2.6
+- Spring Data JDBC
+- Spring Cloud Stack (Eureka, Openfeign, Resilience4j, Sleuth, Zipkin)
+- PostgreSQL 
+- Docker  
+- Mapstruct
 Using Resilience4j for protecting inter-component REST calls from the product application. 
 The fallback behavior is supposed to result in ‘503 service unavailable’ in case of unavailability of any dependant services. 
 Using sleuth request tracing through the inter-component REST calls and the Zipkin server for monitoring request flow and latency.
@@ -59,4 +68,3 @@ docker-compose up
 Todo:
 - [ ] Set CI
 - [ ] Pull the data to container with its creation
-- [ ] 
